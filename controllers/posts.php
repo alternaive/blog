@@ -1,6 +1,6 @@
 <?php namespace App;
 
-class welcome extends Controller
+class posts extends Controller
 {
 
     /**
@@ -12,7 +12,7 @@ class welcome extends Controller
     function index()
     {
 
-        $this->users = get_all("SELECT * FROM users");
+        $this->users = get_all("SELECT * FROM post");
     }
 
     /**
