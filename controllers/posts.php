@@ -42,4 +42,10 @@ class posts extends Controller
 
 
     }
+
+    //view function for blog posts
+    function view() {
+        $post_id = $this->params[0];
+        $this->post = get_first ("SELECT * FROM posts NATURAL JOIN users WHERE post_id='$post_id'");
+    }
 }
